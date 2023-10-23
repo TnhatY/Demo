@@ -180,12 +180,35 @@ struct doublylinkedlist {
 		}
 	}
 	// xoá toàn bộ danh sách
-	void removeAll() {
+	void clear() {
 		if (!Head) {
 			cout << "Empty\n";
 			return;
 		}
 		Head = NULL;
 		Tail = NULL;
+	}
+	// xoá tất cả Node có giá trị v
+	void removeAll(int v) {
+		Node* tmp = Head;
+		Node* prevTmp = Head;
+		while (tmp != NULL) {
+			if (tmp->data == v) {
+				Node* currNode = tmp;
+				if (tmp == Head) {
+					Head = Head->next;
+					tmp = Head;
+					prevTmp = Head;
+				}
+				else {
+					prevTmp->next = tmp->next;
+					tmp = tmp->next;
+				}
+				delete(currNode);
+				continue;
+			}
+			prevTmp = tmp;
+			tmp = tmp->next;
+		}
 	}
 };
