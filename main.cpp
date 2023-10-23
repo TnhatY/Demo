@@ -9,6 +9,7 @@ int main() {
 	listA.add(2);
 	listA.add(6);
 	listA.add(4);
+	listA.add(4);
 	cout << "Danh sach ban dau\n";
 	listA.print();
 	
@@ -25,7 +26,10 @@ int main() {
 	listA.removeTail();// xoá node ở vị trí cuối
 	cout << "Danh sach sau khi xoa\n";
 	listA.print();
-	cout << "Danh sach sau khi xoa het phan tu\n";
-	listA.removeAll();// xoá toàn bộ danh sách
+	cout << "Danh sach sau khi xoa nhung Node co gia tri bang 4\n";
+	listA.removeAll(4);// xoá tất cả những node có giá trị bằng 4
+	listA.print();
+	cout << "Danh sach sau khi xoa het tat ca Node\n";
+	listA.clear();
 	listA.print();
 }
