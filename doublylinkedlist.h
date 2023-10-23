@@ -1,4 +1,4 @@
-﻿#include<bits/stdc++.h>
+﻿#include <bits/stdc++.h>
 #include "node.h"
 using namespace std;
 struct doublylinkedlist {
