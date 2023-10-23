@@ -1,4 +1,4 @@
-﻿#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 #include "node.h"
 using namespace std;
 struct doublylinkedlist {
@@ -109,7 +109,7 @@ struct doublylinkedlist {
 				cout << tmp->data << " ";
 				tmp = tmp->next;
 			}
-			cout << "\n";
+			cout << "\n\n";
 		}
 
 	}
@@ -181,13 +181,11 @@ struct doublylinkedlist {
 	}
 	// xoá toàn bộ danh sách
 	void removeAll() {
-		if (!Head)
+		if (!Head) {
 			cout << "Empty\n";
-		else {
-			Head->next = NULL;
-			Head = NULL;
-			Tail = NULL;
+			return;
 		}
+		Head = NULL;
+		Tail = NULL;
 	}
-
 };
