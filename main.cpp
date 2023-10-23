@@ -18,8 +18,8 @@ int main() {
 	cout << "Danh sach sau khi them\n";
 	listA.print();
 
-	cout << "Node dau tien: ";
-	cout<<listA.getValue(0)<<endl;// lấy giá trị của node đầu tiên
+	cout << "Node tai vi tri 3 la: ";
+	cout << listA.getValue(3) << "\n\n";// lấy giá trị của node ở vị trí 3
 
 	listA.removeAt(2);// xoá node ở vị trí 2
 	listA.removeTail();// xoá node ở vị trí cuối
@@ -28,5 +28,4 @@ int main() {
 	cout << "Danh sach sau khi xoa het phan tu\n";
 	listA.removeAll();// xoá toàn bộ danh sách
 	listA.print();
-	
 }
