@@ -181,13 +181,16 @@ struct doublylinkedlist {
 	}
 	// xoá toàn bộ danh sách
 	void clear() {
-		if (!Head) {
-			cout << "Empty\n";
-			return;
-		}
-		Head = NULL;
-		Tail = NULL;
+	if (!Head) {
+		cout << "Empty\n";
+		return;
 	}
+	while (Head != NULL) {
+		Node* tmp = Head;
+		Head = Head->next;
+		delete(tmp);
+	}
+}
 	// xoá tất cả Node có giá trị v
 	void removeAll(int v) {
 		Node* tmp = Head;
